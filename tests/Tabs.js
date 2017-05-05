@@ -2,13 +2,16 @@ import {expect} from 'chai'
 import React from 'react'
 import {mount, shallow} from 'enzyme'
 
-import {Tab} from '../src'
+import {Tabs} from '../src'
 
-describe('Tab', () => {
+describe('Tabs', () => {
+    it('contains proper initial state', () => {
+        const wrapper = mount(<Tabs />)
+        expect(wrapper.state('activeTab')).to.eql(0)
+    })
+
     it('implements changeTab functionality', () => {
-        const wrapper = mount(<Tab />)
-        console.log(wrapper.props)
-        console.log('-----------------------------------------------------')
-        // expect(wrapper.node.changeTab).to.be.instanceof(Function)
+        const wrapper = mount(<Tabs />)
+        expect(wrapper.node.changeTab).to.not.be.undefined
     })
 })
