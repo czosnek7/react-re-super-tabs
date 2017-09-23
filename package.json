@@ -1,7 +1,7 @@
 {
   "name": "react-re-super-tabs",
   "version": "1.0.0",
-  "description": "react-re-super-tabs React component",
+  "description": "React reusable tab component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -16,7 +16,8 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "prepublish": "npm run build"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -33,10 +34,16 @@
     "standard": "^10.0.2"
   },
   "author": "Bartłomiej Potaczek",
-  "homepage": "",
+  "homepage": "https://github.com/czosnek7/react-re-super-tabs#read",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/czosnek7/react-re-super-tabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/czosnek7/react-re-super-tabs/issues"
+  },
   "keywords": [
-    "react-component"
+    "react, component, tab"
   ]
 }
