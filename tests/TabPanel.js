@@ -1,6 +1,6 @@
 import {expect} from 'chai'
 import React from 'react'
-import {mount, shallow, render} from 'enzyme'
+import {mount} from 'enzyme'
 
 import {TabPanel} from '../src'
 
@@ -14,25 +14,25 @@ describe('TabPanel', () => {
 
     it('has different index property than activeTab property', () => {
         const component = () => <div>tab 1</div>
-        const wrapper = mount(<TabPanel {...{component, index: 0, activeTab: 1}}/>)
+        const wrapper = mount(<TabPanel component={component} id='info' activeTab='about'/>)
 
         expect(wrapper.props().index).to.not.eql(wrapper.props().activeTab)
     })
 
     it('has the same index as activeTab property', () => {
         const component = () => <div>tab 1</div>
-        const wrapper = mount(<TabPanel {...{component, index: 0, activeTab: 0}}/>)
+        const wrapper = mount(<TabPanel component={component} id='info' activeTab='info'/>)
 
-        expect(wrapper.props().index).to.eql(wrapper.props().activeTab)
+        expect(wrapper.props().id).to.eql(wrapper.props().activeTab)
     })
 
     it('has the same index as activeTab property after props change', () => {
         const component = () => <div>tab 1</div>
-        const wrapper = mount(<TabPanel {...{component, index: 0, activeTab: 1}}/>)
+        const wrapper = mount(<TabPanel component={component} id='info' activeTab='about'/>)
 
-        wrapper.setProps({activeTab: 0});
+        wrapper.setProps({activeTab: 'info'});
 
-        expect(wrapper.props().index).to.eql(wrapper.props().activeTab)
+        expect(wrapper.props().id).to.eql(wrapper.props().activeTab)
     })
 
     it('has container that contains "panel aside" provided by custom component', () => {
@@ -41,8 +41,7 @@ describe('TabPanel', () => {
                 <div className='panel__aside'>panel aside</div>
             </div>
         </div>
-        const wrapper = mount(<TabPanel {...{component, index: 1, activeTab: 1}}/>)
-
+        const wrapper = mount(<TabPanel component={component} id='about' activeTab='about'/>)
         expect(wrapper.find('.panel__aside').text()).to.eql('panel aside')
     })
 
@@ -52,7 +51,7 @@ describe('TabPanel', () => {
                 <div className='panel__aside'>panel aside</div>
             </div>
         </div>
-        const wrapper = mount(<TabPanel {...{component, index: 1, activeTab: 0}}/>)
+        const wrapper = mount(<TabPanel component={component} id='info' activeTab='about'/>)
 
         expect(wrapper.find('.panel__aside').length).to.eql(0)
     })

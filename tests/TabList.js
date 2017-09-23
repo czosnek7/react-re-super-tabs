@@ -1,6 +1,6 @@
 import {expect} from 'chai'
 import React from 'react'
-import {mount, shallow} from 'enzyme'
+import {mount} from 'enzyme'
 
 import {TabList} from '../src'
 
@@ -51,23 +51,23 @@ describe('TabList', () => {
 
     it('contains activeTab property set to 1', () => {
         const wrapper = mount(
-            <TabList {...{activeTab: 1}} >
+            <TabList activeTab='info'>
                 <Tab />
                 <Tab />
             </TabList>
         )
 
-        expect(wrapper.props()).to.have.property('activeTab', 1)
+        expect(wrapper.props()).to.have.property('activeTab', 'info')
     })
 
     it('contains activeTab property set to "bg-red color-green"', () => {
         const wrapper = mount(
-            <TabList {...{styleName: 'bg-red color-green'}} >
+            <TabList className='bg-red color-green'>
                 <Tab />
                 <Tab />
             </TabList>
         )
 
-        expect(wrapper.props()).to.have.property('styleName', 'bg-red color-green')
+        expect(wrapper.props()).to.have.property('className', 'bg-red color-green')
     })
 })
