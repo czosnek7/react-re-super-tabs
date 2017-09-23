@@ -3,10 +3,10 @@
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/czosnek7/react-re-super-tabs/builds/279023576
+[build-badge]: https://travis-ci.org/czosnek7/react-re-super-tabs.svg?branch=master
+[build]: https://travis-ci.org/czosnek7/react-re-super-tabs
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-re-super-tabs.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-re-super-tabs
 
 React reusable tab component
