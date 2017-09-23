@@ -1,15 +1,13 @@
 import React from 'react'
 import {render} from 'react-dom'
+import SimpleExample from './SimpleExample'
+import CustomTabExample from './CustomTabExample'
 
-import Component from '../../src'
-
-let Demo = React.createClass({
-  render() {
-    return <div>
-      <h1>react-re-super-tabs Demo</h1>
-      <Component/>
+const App = () =>
+    <div>
+        <h1>react-re-super-tabs Demo</h1>
+        <SimpleExample/>
+        <CustomTabExample/>
     </div>
-  }
-})
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<App/>, document.querySelector('#demo'))
