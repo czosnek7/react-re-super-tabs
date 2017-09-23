@@ -1,6 +1,6 @@
 {
   "name": "react-re-super-tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React reusable tab component",
   "main": "lib/index.js",
   "module": "es/index.js",
