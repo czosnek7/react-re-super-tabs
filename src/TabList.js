@@ -1,21 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TabList = ({children, changeTab, activeTab, styleName}) => {
+const TabList = ({children, changeTab, activeTab, className}) => {
     const childrenWithProps = React.Children.map(children,
-        (child, index) => React.cloneElement(child, {
-            index, changeTab, activeTab
+        child => React.cloneElement(child, {
+            changeTab, activeTab
         })
     )
 
-    return (<div className={styleName}>{childrenWithProps}</div>)
+    return (
+        <div className={className}>{childrenWithProps}</div>
+    )
 }
 
 TabList.propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element
+    ]),
     changeTab: PropTypes.func,
-    activeTab: PropTypes.number,
-    styleName: PropTypes.string
+    activeTab: PropTypes.string,
+    className: PropTypes.string
 }
 
 export default TabList

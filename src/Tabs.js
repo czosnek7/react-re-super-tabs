@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 class TabsContainer extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {activeTab: 0}
+        const {activeTab} = props
+        this.state = {activeTab}
         this.changeTab = this.changeTab.bind(this)
     }
 
@@ -16,19 +17,25 @@ class TabsContainer extends React.Component {
             })
         )
 
-        return (<div>{childrenWithProps}</div>)
+        return (
+            <div>{childrenWithProps}</div>
+        )
     }
 
     changeTab(event) {
         const {currentTarget} = event
-        const activeTab = parseInt(currentTarget.getAttribute('data-tab'))
+        const activeTab = currentTarget.getAttribute('data-id')
 
         this.setState(() => ({activeTab}))
     }
 }
 
 TabsContainer.propTypes = {
-    children: PropTypes.array
+    activeTab: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element
+    ])
 }
 
 export default TabsContainer

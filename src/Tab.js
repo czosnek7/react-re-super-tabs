@@ -1,24 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Tab = ({component, label, index, changeTab, activeTab}) => {
+const Tab = ({component, label, id, changeTab, activeTab}) => {
     const Component = component
+    const isActive = id === activeTab
     return (
-        <span onClick={changeTab} data-tab={index}>
-      <Component {...{isActive: (index === activeTab)}} >{label}</Component>
+        <span onClick={changeTab} data-id={id}>
+      <Component isActive={isActive}>{label}</Component>
     </span>
     )
 }
 
 Tab.propTypes = {
     component: PropTypes.func,
-    label: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]),
-    index: PropTypes.number,
+    id: PropTypes.string,
+    label: PropTypes.string,
     changeTab: PropTypes.func,
-    activeTab: PropTypes.number
+    activeTab: PropTypes.string
 }
 
 export default Tab

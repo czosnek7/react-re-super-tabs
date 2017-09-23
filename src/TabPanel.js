@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TabPanel = ({component, index, activeTab}) => {
+const TabPanel = ({component, id, activeTab}) => {
     const Component = component
     return (
         <div>
-            {index === activeTab && <Component />}
+            {id === activeTab && <Component />}
         </div>
     )
 }
 
 TabPanel.propTypes = {
     component: PropTypes.func,
-    index: PropTypes.number,
-    activeTab: PropTypes.number
+    id: PropTypes.string,
+    activeTab: PropTypes.string
 }
 
 export default TabPanel
