@@ -2,7 +2,7 @@
 /coverage
 /demo/dist
 /es
-/lib
+lib
 /node_modules
-/umd
+umd
 npm-debug.log*
