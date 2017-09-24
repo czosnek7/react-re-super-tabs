@@ -13,8 +13,8 @@ React reusable tab component
 
 ## Demo
 
-GIF
-
+![react-re-super-tabs screenshot](./react-re-super-tabs.png)
+[![Edit react-re-super-tabs](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/l9z1qwl8pq?module=%2Finformation%2FInformation.js)
 ## Installing
  yarn:
  
