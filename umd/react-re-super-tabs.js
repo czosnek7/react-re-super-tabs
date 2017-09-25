@@ -1,5 +1,5 @@
 /*!
- * react-re-super-tabs v1.0.1 - https://github.com/czosnek7/react-re-super-tabs#read
+ * react-re-super-tabs v1.0.2 - https://github.com/czosnek7/react-re-super-tabs#read
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -392,7 +392,7 @@ var Tab = function Tab(_ref) {
 Tab.propTypes = {
     component: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
     id: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-    label: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    label: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string, __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number]),
     changeTab: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
     activeTab: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
 };

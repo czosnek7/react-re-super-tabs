@@ -14,7 +14,10 @@ const Tab = ({component, label, id, changeTab, activeTab}) => {
 Tab.propTypes = {
     component: PropTypes.func,
     id: PropTypes.string,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     changeTab: PropTypes.func,
     activeTab: PropTypes.string
 }

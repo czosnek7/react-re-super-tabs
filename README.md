@@ -13,7 +13,7 @@ React reusable tab component
 
 ## Demo
 
-![react-re-super-tabs screenshot](./react-re-super-tabs.png)
+![react-re-super-tabs screenshot](./react-re-super-tabs.gif)
 [![Edit react-re-super-tabs](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/l9z1qwl8pq?module=%2Finformation%2FInformation.js)
 ## Installing
  yarn:
@@ -26,21 +26,21 @@ React reusable tab component
 
 ## Usage
 ```js
-import { Tabs, Tab, TabPanel, TabList } from 'react-re-super-tabs';
+import { Tabs, Tab, TabPanel, TabList } from 'react-re-super-tabs'
 import { Info, About } from '../information'
 import CustomTab from '../CustomTab'
 
 export default () => (
   <Tabs activeTab='about'>
     <TabList>
-      <Tab component={() => <div>info</div>} id='info'/>
+      <Tab component={() => <div>info</div>} id='info' />
       <Tab component={CustomTab} label='about' id='about' />
       <Tab component={() => <div>contact</div>} id='contact' />
     </TabList>
     <TabList>
       <TabPanel component={Info} id='info'/>
       <TabPanel component={About} id='about'/>
-      <TabPanel component={() => <p>contact content ...</p>} id='contact'/>
+      <TabPanel component={() => <p>contact content ...</p>} id='contact' />
     </TabList>
   </Tabs>
 )
@@ -74,7 +74,7 @@ Container for `Tab`, `TabPanel` components
       ...
     </TabList>
     <TabList className={styles.list}>
-        <TabPanel component={Info} id='info'/>
+        <TabPanel component={Info} id='info' />
         ...
     </TabList>
 </Tabs>
@@ -85,7 +85,7 @@ Clickable label component that change the content view - `TabPanel`.
 Each `Tab` component should have an identifier corresponding to the identifier of the `TabPanel` component
 
 ##### component: `function`
-##### label: `string`
+##### label: `string | number`
 ##### id: `string`
 
 ```js
@@ -108,8 +108,8 @@ Each `TabPanel` component should have an identifier corresponding to the identif
 ##### component: `function`
 ##### id: `string`
 ```js
-  <TabPanel component={() => <p>info content</p>} id='info' />
+<TabPanel component={() => <p>info content</p>} id='info' />
 ```
 ```js
-  <TabPanel component={Info} id='info' />
+<TabPanel component={Info} id='info' />
 ```
