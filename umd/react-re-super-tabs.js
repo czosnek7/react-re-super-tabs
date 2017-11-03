@@ -1,5 +1,5 @@
 /*!
- * react-re-super-tabs v1.0.3 - https://github.com/czosnek7/react-re-super-tabs#read
+ * react-re-super-tabs v1.0.4 - https://github.com/czosnek7/react-re-super-tabs#read
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {

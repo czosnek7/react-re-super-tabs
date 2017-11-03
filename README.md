@@ -9,7 +9,7 @@
 [npm-badge]: https://img.shields.io/npm/v/react-re-super-tabs.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-re-super-tabs
 
-React reusable tab component
+React reusable tab component 
 
 ## Demo
 
