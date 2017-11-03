@@ -7,7 +7,7 @@ import {Tabs} from '../src'
 describe('Tabs', () => {
     it('render div as a root', () => {
         const wrapper = mount(<Tabs />)
-        expect(wrapper.node.render().type).to.eql('div')
+        expect(wrapper.instance().render().type).to.eql('div')
     })
 
     it('contains proper initial state', () => {
@@ -17,12 +17,12 @@ describe('Tabs', () => {
 
     it('implements changeTab functionality', () => {
         const wrapper = mount(<Tabs />)
-        expect(wrapper.node.changeTab).to.not.be.undefined
+        expect(wrapper.instance().changeTab).to.not.be.undefined
     })
 
     it('change the state when invoking changeTab', () => {
         const wrapper = mount(<Tabs />)
-        wrapper.node.changeTab({
+        wrapper.instance().changeTab({
             currentTarget: {
                 getAttribute: (tab) => 1
             }
