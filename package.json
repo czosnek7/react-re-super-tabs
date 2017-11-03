@@ -22,17 +22,16 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^16.0.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "enzyme": "^2.8.2",
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
     "np": "^2.16.0",
     "nwb": "0.15.x",
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "standard": "^10.0.2"
   },
   "author": "Bartłomiej Potaczek",

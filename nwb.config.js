@@ -11,7 +11,7 @@ module.exports = {
   },
   webpack: {
     compat: {
-        enzyme: true
+      enzyme: true
     }
   }
 }
