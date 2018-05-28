@@ -22,6 +22,13 @@ class TabsContainer extends React.Component {
         )
     }
 
+    componentWillReceiveProps (nextProps) {
+        const {activeTab} = this.props
+        if (nextProps.activeTab !== activeTab) {
+            this.setState(() => ({ activeTab: nextProps.activeTab }))
+        }
+    }
+
     changeTab(event) {
         const {currentTarget} = event
         const activeTab = currentTarget.getAttribute('data-id')

@@ -1,5 +1,5 @@
 /*!
- * react-re-super-tabs v1.0.5 - https://github.com/czosnek7/react-re-super-tabs#read
+ * react-re-super-tabs v1.0.6 - https://github.com/czosnek7/react-re-super-tabs#read
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -343,7 +343,7 @@ var Tabs = __WEBPACK_IMPORTED_MODULE_3__Tabs__["a" /* default */];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _jsxFileName = '/Users/potaczekbartlomiej/Documents/Projects/frontend/packages/react-re-super-tabs/src/Tab.js',
+var _jsxFileName = '/Users/bartlomiejpotaczek/Documents/Projects/frontend/packages/react-re-super-tabs/src/Tab.js',
     _this = this;
 
 
@@ -398,7 +398,7 @@ Tab.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _jsxFileName = '/Users/potaczekbartlomiej/Documents/Projects/frontend/packages/react-re-super-tabs/src/TabList.js',
+var _jsxFileName = '/Users/bartlomiejpotaczek/Documents/Projects/frontend/packages/react-re-super-tabs/src/TabList.js',
     _this = this;
 
 
@@ -446,7 +446,7 @@ TabList.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _jsxFileName = '/Users/potaczekbartlomiej/Documents/Projects/frontend/packages/react-re-super-tabs/src/TabPanel.js',
+var _jsxFileName = '/Users/bartlomiejpotaczek/Documents/Projects/frontend/packages/react-re-super-tabs/src/TabPanel.js',
     _this = this;
 
 
@@ -494,7 +494,7 @@ TabPanel.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _jsxFileName = '/Users/potaczekbartlomiej/Documents/Projects/frontend/packages/react-re-super-tabs/src/Tabs.js';
+var _jsxFileName = '/Users/bartlomiejpotaczek/Documents/Projects/frontend/packages/react-re-super-tabs/src/Tabs.js';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -542,6 +542,16 @@ var TabsContainer = function (_React$Component) {
             },
             childrenWithProps
         );
+    };
+
+    TabsContainer.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+        var activeTab = this.props.activeTab;
+
+        if (nextProps.activeTab !== activeTab) {
+            this.setState(function () {
+                return { activeTab: nextProps.activeTab };
+            });
+        }
     };
 
     TabsContainer.prototype.changeTab = function changeTab(event) {
